@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title">Harmony Hall - Classical & Western Instruments</title>
+    <style>
+        /*---------- COLORS ----------*/
+        :root {
+            --main-blue: #2d6faf;
+            --light-blue: #a9d6fa;
+            --main-pink: #ffc1e3;
+            --light-pink: #fce4f0;
+            --main-orange: #ffa040;
+        }
+
+        /*---------- GLOBAL STYLES ----------*/
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--light-pink);
+        }
+
+        /*---------- HEADER ----------*/
+        header {
+            background-color: var(--main-blue);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+
+        /*---------- NAVIGATION ----------*/
+        nav {
+            background-color: var(--light-blue);
+            display: flex;
+            justify-content: space evenly;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--main-orange);
+        }
+
+        /*---------- MAIN CONTENT ----------*/
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .instrument {
+            background-color: var(--light-pink);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 25%;
+            text-align: center;
+        }
+
+        .instrument img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .instrument h3 {
+            color: var(--main-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .instrument p {
+            font-size: 0.8rem;
+        }
+
+        /*---------- FOOTER ----------*/
+        footer {
+            background-color: var(--main-orange);
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        /*---------- FORM ----------*/
+        form {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        form button {
+            background-color: var(--main-blue);
+            color: #fff;
+            padding: 0.7rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /*---------- RESPONSIVENESS ----------*/
+        @media screen and (max-width: 768px) {
+            .instrument {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .instrument {
+                width: 100%;
+            }
+
+            nav {
+                flex-direction: column
