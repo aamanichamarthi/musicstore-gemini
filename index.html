@@ -5,119 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title">Harmony Hall - Classical & Western Instruments</title>
     <style>
-        /*---------- COLORS ----------*/
-        :root {
-            --main-blue: #2d6faf;
-            --light-blue: #a9d6fa;
-            --main-pink: #ffc1e3;
-            --light-pink: #fce4f0;
-            --main-orange: #ffa040;
-        }
-
-        /*---------- GLOBAL STYLES ----------*/
-        * {
-            box-sizing: border-box;
-            font-family: sans-serif;
+        /* Overall Styling */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
         }
 
-        body {
-            background-color: var(--light-pink);
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /*---------- HEADER ----------*/
+        /* Header Styling */
         header {
-            background-color: var(--main-blue);
+            background-color: #f08080;
             color: #fff;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
         }
 
-        /*---------- NAVIGATION ----------*/
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        /* Navigation Bar Styling */
         nav {
-            background-color: var(--light-blue);
+            background-color: #ffc0cb;
+            padding: 10px;
             display: flex;
-            justify-content: space evenly;
-            padding: 1rem 2rem;
-            font-size: 1rem;
+            justify-content: space-around;
         }
 
         nav a {
-            color: #000;
             text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            padding: 5px 10px;
         }
 
         nav a:hover {
-            color: var(--main-orange);
+            background-color: #f0e0e0;
         }
 
-        /*---------- MAIN CONTENT ----------*/
-        main {
-            padding: 2rem;
+        /* Product List Styling */
+        .product-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
-        .instrument {
-            background-color: var(--light-pink);
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            margin: 1rem;
+        .product-item {
             width: 25%;
-            text-align: center;
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
 
-        .instrument img {
+        .product-item img {
             width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .instrument h3 {
-            color: var(--main-blue);
-            margin-bottom: 0.5rem;
+        .product-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
         }
 
-        .instrument p {
-            font-size: 0.8rem;
+        .product-item p {
+            font-size: 0.8em;
+            margin-bottom: 10px;
         }
 
-        /*---------- FOOTER ----------*/
-        footer {
-            background-color: var(--main-orange);
-            color: #fff;
-            padding: 1rem 2rem;
-            text-align: center;
+        .product-item span {
+            font-weight: bold;
         }
 
-        /*---------- FORM ----------*/
+        /* Feedback Form Styling */
         form {
-            margin: 2rem 0;
-            padding: 1rem;
-            border: 1px solid #ddd;
+            background-color: #e0ffff;
+            padding: 10px;
             border-radius: 5px;
         }
 
         form label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        form input,
-        form textarea {
-            display: block;
+        form input, textarea {
+            padding: 5px;
+            margin-bottom: 10px;
             width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
+            border: 1px solid #ccc;
             border-radius: 3px;
-            margin-bottom: 1rem;
         }
 
         form textarea {
@@ -125,25 +114,37 @@
         }
 
         form button {
-            background-color: var(--main-blue);
+            background-color: #ff9999;
             color: #fff;
-            padding: 0.7rem 1rem;
+            padding: 10px 15px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
-        /*---------- RESPONSIVENESS ----------*/
+        form button:hover {
+            background-color: #ff6666;
+        }
+
+        /* Responsive Media Queries */
         @media screen and (max-width: 768px) {
-            .instrument {
-                width: 50%;
+            .product-item {
+                width: 45%;
             }
         }
 
         @media screen and (max-width: 480px) {
-            .instrument {
+            .product-item {
                 width: 100%;
             }
 
             nav {
-                flex-direction: column
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    
